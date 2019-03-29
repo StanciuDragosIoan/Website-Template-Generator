@@ -1,0 +1,36 @@
+###Day 1
+
+-This will be a template configurator for my own projects;
+-Requirements (initial)
+
+
+-client can choose between pre-defined components to make a template;
+-components are configurable (2 initial 'versions of templates' with 2 radically different collor schemas/design concepts)
+-besides initial configuration, client can replace the component text with his own (click event);
+-template is saved as archive on the client;
+-note sure yet if it will be generating a single page app/teplate or multiple;
+
+
+-next step would be for client to be able to upload an image and use it for a component;
+-use materialize CSS or make everything custom from scratch;
+-define a master sandbox for workflow;
+
+
+
+#tasks:
+
+
+-define interface;
+-define the 2 initial templates;
+-add the configuration/download logic using the adequate libraries;
+
+
+#first attempt UI with custom CSS (no framework);
+
+
+-working on tooltips;
+-finished tooltip
+-started working  on UI Interactions
+
+
+#### building custom CSS UI (testing in Chrome+IE)

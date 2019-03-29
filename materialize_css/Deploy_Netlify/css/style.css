@@ -1,0 +1,119 @@
+:root {
+    --main-bg-color: coral;
+}
+
+
+/* MAIN PANEL */
+#main-panel {
+    width: 5rem;
+}
+
+.main-btn {
+    background: #01060a;
+    width: 100%;
+}
+
+.navbar-fixed {
+    width: 5rem;
+}
+
+.main-btn i {
+    /* margin-left:5%; */
+    font-size: 2.5rem !important;
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer */
+    -khtml-user-select: none;
+    /* KHTML browsers (e.g. Konqueror) */
+    -webkit-user-select: none;
+    /* Chrome, Safari, and Opera */
+}
+
+#content-panel,
+#config-panel {
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer */
+    -khtml-user-select: none;
+    /* KHTML browsers (e.g. Konqueror) */
+    -webkit-user-select: none;
+    /* Chrome, Safari, and Opera */
+}
+
+.main-btn i:hover {
+    cursor: pointer;
+}
+
+
+
+
+/* CONTENT PANEL */
+#content-panel {
+    margin-left: 5rem;
+    width: 5rem;
+    position: fixed;
+    /* margin-top:-4.1rem; */
+    margin-top: -3rem;
+    display: none;
+    z-index: 500;
+}
+
+#content-panel:hover {
+    cursor: pointer;
+}
+
+#content-panel .content-btn {
+    background: #1297a3;
+    color: white;
+    border: 1px solid #01060a;
+    opacity: 0.4;
+    width: 6rem;
+    height: 3rem;
+    padding-top: 0.5rem;
+}
+
+
+.content-btn:hover {
+    height: 3.5rem;
+    opacity: 0.6 !important;
+    ;
+    transition: 0.8s;
+    width: 7rem !important;
+}
+
+
+/*Config panel*/
+#config-panel {
+    /* margin-left:5rem; */
+    width: 5rem;
+    position: fixed;
+    /* margin-top:-4.1rem; */
+    margin-top: 12rem;
+    display: none;
+    z-index: 500;
+}
+
+#config-panel:hover {
+    cursor: pointer;
+}
+
+#config-panel .content-btn {
+    background: #1297a3;
+    color: white;
+    border: 1px solid #01060a;
+    opacity: 0.4;
+    width: 6rem;
+    height: 3rem;
+    padding-top: 0.5rem;
+
+}
+
+/* Template preview styling */
+#template {
+    padding: 1rem !important;
+    margin-top: 5rem !important;
+    max-width: 1300px;
+    margin: auto;
+}

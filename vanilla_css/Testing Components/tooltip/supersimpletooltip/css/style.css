@@ -1,0 +1,126 @@
+/* CSS RESET */
+
+
+/* box-sizing */
+html {
+    box-sizing: border-box;
+  }
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+/* Reset margin/padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/* lists */
+ul {
+    list-style: none;
+  }
+
+  /* Forms and Buttons */
+input,
+textarea,
+select,
+button {
+  color: inherit; 
+  font: inherit; 
+  letter-spacing: inherit; 
+}
+
+input,
+textarea,
+select,
+button {
+  color: inherit; 
+  font: inherit; 
+  letter-spacing: inherit; 
+}
+
+button {
+    border-radius: 0; 
+    padding: 0.75em 1em;
+    background-color: transparent;
+  }
+
+
+  /* Media elements */
+  embed,
+iframe,
+img,
+object,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* Nav */
+#navigation-panel{
+    height: 100%;
+    width:5rem;
+    /* width: 10rem; */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #181818;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+ 
+
+/* main Buttons */
+.main-button{
+    color:#f4f4f4;
+    /* padding: 1rem 1rem; */
+    display:block;
+    margin: 0.5rem 1.5rem;
+}
+
+.main-button:hover{
+    cursor:pointer;
+  
+     
+}
+ /* tooltip */
+ .main-button .tooltip{
+   opacity:0;
+   color:#f4f4f4;
+   margin: 0.2rem -1rem;
+   /* margin: 1rem auto; */
+ }
+
+
+ .main-button:hover .tooltip{
+   opacity: 1;
+   transition: all 0.8s ease-in-out;
+   -webkit-transition: all 0.8s ease-in-out;
+ }
+
+
+  
+
+  
