@@ -10,8 +10,11 @@ const configPanelBtn = document.querySelector("#configBtn");
 configPanel = document.querySelector("#config-panel");
 const removeConfigBtn = document.querySelector("#removeConfig");
 
+//navigation item config buttons
 const addNavItemBtn = document.querySelector("#addNavItem");
 const removeNavItemBtn = document.querySelector("#removeNavItem");
+const menuLeftBtn = document.querySelector("#menuLeft");
+const menuRightBtn = document.querySelector("#menuRight");
 
 
 //Events
@@ -21,8 +24,14 @@ removeContentBtn.addEventListener("click", removeContentPanel);
 configPanelBtn.addEventListener("click", addConfigPanel);
 removeConfigBtn.addEventListener("click", removeConfigPanel);
 
+
+//navigation item config
 addNavItemBtn.addEventListener("click", addNavItem);
 removeNavItemBtn.addEventListener("click", removeNavItem);
+
+menuLeftBtn.addEventListener("click", switchMenuLeft);
+menuRightBtn.addEventListener("click", switchMenuRight);
+
 // Functions
 function addContentPanel() {
     contentPanel.style.display = "block";
@@ -42,6 +51,11 @@ function removeConfigPanel() {
     configPanel.style.display = "none";
 }
 
+
+
+
+// NAVIGATION CUSTOMMISATION
+
 //add navigation item
 function addNavItem() {
     console.log('adding menu item');
@@ -50,6 +64,13 @@ function addNavItem() {
     navItemPlaceholderArr.forEach((item) => {
         item.innerHTML += '<li class="navigation-item"><a href="#">New Item</a></li>';
     });
+
+    const items = document.querySelectorAll(".navigation-item");
+    const itemsArr = Array.from(items);
+    if (itemsArr.length === 12) {
+        console.log('Navigation logo needs to be moved or deleted =)');
+    }
+
 }
 
 
@@ -178,9 +199,15 @@ function removeNavItem() {
             }
         }
     }
+}
 
 
+function switchMenuLeft() {
+    const menu = document.querySelector("#menuPositionItem");
+    menu.className = "left hide-on-med-and-down";
+}
 
-
-
+function switchMenuRight() {
+    const menu = document.querySelector("#menuPositionItem");
+    menu.className = "right hide-on-med-and-down";
 }
