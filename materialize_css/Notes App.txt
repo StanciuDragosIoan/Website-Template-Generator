@@ -30,3 +30,6 @@ Contact
 -made it so that user can add/remove navigation items 
 
 *think up of a way to set destination for smoothscrolling on nav items;
+################################day 3
+-made it so that menu can be aligned left or right
+-started working on the slider component
