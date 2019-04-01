@@ -211,3 +211,33 @@ function switchMenuRight() {
     const menu = document.querySelector("#menuPositionItem");
     menu.className = "right hide-on-med-and-down";
 }
+
+
+
+// SLIDER CUSTOMISATIOn
+const removeSlideBtn = document.querySelector("#remove-buttons-slider");
+const addSlideBtn = document.querySelector("#add-buttons-slider");
+
+removeSlideBtn.addEventListener("click", removeSliderButtons);
+
+function removeSliderButtons() {
+    const buttonsCollection = document.querySelectorAll(".slider-btn");
+    const buttonsAr = Array.from(buttonsCollection);
+    buttonsAr.forEach((item) => {
+        item.innerHTML = '';
+        item.className = '';
+    });
+
+}
+
+addSlideBtn.addEventListener("click", addSliderButtons);
+
+function addSliderButtons() {
+    const buttonsCollection = document.querySelectorAll(".slider-btn-to-be");
+    const buttonsAr = Array.from(buttonsCollection);
+    buttonsAr.forEach((item) => {
+        item.innerHTML = `
+        <a class="waves-effect waves-light btn-large blue darken-4 slider-btn">Click For More</a>
+        `;
+    });
+}

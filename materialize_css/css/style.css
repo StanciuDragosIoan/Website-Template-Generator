@@ -135,7 +135,7 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-//make text un-selectable
+/*make text un-selectable*/
 ul.slides {
     -moz-user-select: none;
     /* Firefox */

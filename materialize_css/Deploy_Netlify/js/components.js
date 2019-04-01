@@ -20,8 +20,6 @@
                 </ul>
                 </div>
             </nav>
-        
- 
             <ul class="sidenav" id="mobile-demo">
                 <li class="navigation-item"><a href="#">Home</a></li>
                 <li class="navigation-item"><a href="#">About</a></li>
@@ -31,6 +29,57 @@
             </ul>
      
         `
+ };
+
+ slider = {
+     type: "dynamic",
+     init: function () {
+         $(document).ready(function () {
+             $('.slider').slider();
+         });
+     },
+     content: `
+     <div class="slider">
+     <ul class="slides">
+       <li>
+            <div class="slider-overlay"></div>
+            <img src="img/pic1.jpg">
+            <div class="caption center-align">
+            <h3>Customize your template!</h3>
+            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>         
+            <a class="waves-effect waves-light btn-large blue darken-4">Clcik For More</a>
+            </div>
+       </li>
+       <li>
+            <div class="slider-overlay"></div>
+            <img src="img/pic2.jpg">  
+            <div class="caption left-align">
+            <h3>Left Aligned Caption</h3>
+            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            <a class="waves-effect waves-light btn-large blue darken-4">Clcik For More</a>
+         </div>
+       </li>
+       <li>
+            <div class="slider-overlay"></div>
+            <img src="img/pic3.jpg"> 
+            <div class="caption right-align">
+            <h3>Right Aligned Caption</h3>
+            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            <a class="waves-effect waves-light btn-large blue darken-4">Clcik For More</a>
+            </div>
+       </li>
+       <li>
+            <div class="slider-overlay"></div>
+            <img src="img/pic4.jpg"> 
+            <div class="caption center-align">
+            <h3>Centered header!</h3>
+            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            <a class="waves-effect waves-light btn-large blue darken-4">Clcik For More</a>
+            </div>
+       </li>
+     </ul>
+   </div>
+     `
  }
 
 
@@ -44,14 +93,21 @@
 
 
      } else {
-         const navComponentElement = document.querySelector("#nav-menu");
-         if (navComponentElement == null) {
-             //insert nav into the DOM (only 1 nav)
-             document.querySelector("#template-header").innerHTML += component.content;
+         if (component === nav) {
+             const navComponentElement = document.querySelector("#nav-menu");
+             if (navComponentElement == null) {
+                 //insert nav into the DOM (only 1 nav)
+                 document.querySelector("#template-header").innerHTML += component.content;
+                 component.init();
+             } else {
+                 console.log('there already is 1 nav');
+             }
+         } else if (component === slider) {
+             document.querySelector("#template-content").innerHTML += component.content;
              component.init();
-         } else {
-             console.log('there already is 1 nav');
+             console.log('adding slider...');
          }
+
 
      }
 

@@ -33,6 +33,3 @@ Contact
 ################################day 3
 -made it so that menu can be aligned left or right
 -started working on the slider component
--added slider
--configuration psosible (adding or removing buttons)
-#att the possibility to upload and use images
