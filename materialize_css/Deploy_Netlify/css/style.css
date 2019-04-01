@@ -42,6 +42,10 @@
     /* Chrome, Safari, and Opera */
 }
 
+#config-panel li {
+    display: none;
+}
+
 .main-btn i:hover {
     cursor: pointer;
 }
@@ -68,7 +72,7 @@
     background: #1297a3;
     color: white;
     border: 1px solid #01060a;
-    opacity: 0.4;
+    opacity: 0.6;
     width: 6rem;
     height: 3rem;
     padding-top: 0.5rem;
@@ -103,7 +107,7 @@
     background: #1297a3;
     color: white;
     border: 1px solid #01060a;
-    opacity: 0.4;
+    opacity: 0.6;
     width: 6rem;
     height: 3rem;
     padding-top: 0.5rem;

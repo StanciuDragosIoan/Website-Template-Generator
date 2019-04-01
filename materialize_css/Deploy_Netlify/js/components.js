@@ -7,11 +7,11 @@
          initializeConfigPanel(nav);
      },
      content: `
-            <nav class="blue darken-4 nav-component">
+            <nav class="blue darken-4 nav-component" id="nav-menu">
                 <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Logo</a>
+                <a href="#!" class="brand-logo">Logo</a> 
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
+                <ul class="right hide-on-med-and-down" id="menuPositionItem">
                     <li class="navigation-item"><a href="#">Home</a></li>
                     <li class="navigation-item"><a href="#">About</a></li>
                     <li class="navigation-item"><a href="#">Products</a></li>
@@ -38,11 +38,21 @@
 
  //insert component into the DOM
  function insertComponentInPage(component) {
+
      if (component.type === "static") {
          document.querySelector("#template-header").innerHTML += component.content;
+
+
      } else {
-         document.querySelector("#template-header").innerHTML += component.content;
-         component.init();
+         const navComponentElement = document.querySelector("#nav-menu");
+         if (navComponentElement == null) {
+             //insert nav into the DOM (only 1 nav)
+             document.querySelector("#template-header").innerHTML += component.content;
+             component.init();
+         } else {
+             console.log('there already is 1 nav');
+         }
+
      }
 
  }
@@ -53,6 +63,13 @@
          const navCollection = document.querySelectorAll('.nav-component');
          const navAr = Array.from(navCollection);
          component = navAr;
+
+         //define nav-items configuration elements in the config panel
+         let items = document.querySelectorAll('.nav-config-item');
+         let itemsArr = Array.from(items);
+         itemsArr.forEach((item) => {
+             item.style.display = 'block';
+         });
      }
 
 
