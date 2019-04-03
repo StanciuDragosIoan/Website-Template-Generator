@@ -1,118 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+            integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+            crossorigin="anonymous">
 
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
-    <title>Website Template Generator</title>
-</head>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link type="text/css" rel="stylesheet" href="css/style.css"
+            media="screen,projection" />
+        <title>Website Template Generator</title>
+    </head>
 
-<body>
-    <!-- Main Panel -->
-    <div class="navbar-fixed">
-        <nav id="main-panel">
-            <ul>
-                <li class="main-btn">
-                    <a class="tooltipped" data-position="right" data-tooltip="Create" id="contentBtn">
-                        <i class="material-icons">
-                            create
-                        </i>
-                    </a>
-                </li class="main-btn">
+    <body>
+        <!-- Main Panel -->
+        <div class="navbar-fixed">
+            <nav id="main-panel">
+                <ul>
+                    <li class="main-btn">
+                        <a class="tooltipped" data-position="right"
+                            data-tooltip="Create" id="contentBtn">
+                            <i class="material-icons">
+                                create
+                            </i>
+                        </a>
+                    </li class="main-btn">
 
-                <li class="main-btn">
-                    <a class="tooltipped" data-position="right" data-tooltip="Customise" id="configBtn">
-                        <i class="material-icons">
-                            extension
-                        </i>
-                    </a>
-                </li>
+                    <li class="main-btn">
+                        <a class="tooltipped" data-position="right"
+                            data-tooltip="Customise" id="configBtn">
+                            <i class="material-icons">
+                                extension
+                            </i>
+                        </a>
+                    </li>
 
-                <li class="main-btn">
-                    <a class="tooltipped" data-position="right" data-tooltip="Style">
-                        <i class="material-icons">
-                            brush
-                        </i>
-                    </a>
-                </li>
+                    <li class="main-btn">
+                        <a class="tooltipped" data-position="right"
+                            data-tooltip="Style">
+                            <i class="material-icons">
+                                brush
+                            </i>
+                        </a>
+                    </li>
 
-                <li class="main-btn">
-                    <a class="tooltipped" data-position="right" data-tooltip="Save">
-                        <i class="material-icons">
-                            save
-                        </i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-
-    <ul id="content-panel">
-        <li class="content-btn center" onclick="insertComponentInPage(nav)">Nav</li>
-        <li class="content-btn center" onclick="insertComponentInPage(slider)">Slider</li>
-        <li class="content-btn center" onclick="insertComponentInPage(about)">About</li>
-        <li class="content-btn center">Gallery</li>
-        <li class="content-btn center">Boxes</li>
-        <li class="content-btn center">Toggle</li>
-        <li class="content-btn center">Contact</li>
-        <li class="content-btn center">Footer</li>
-        <li class="content-btn center red" id="removeContent">
-            <i class="material-icons">
-                close
-            </i>
-        </li>
-    </ul>
-
-    <ul id="config-panel">
-        <!-- Nav config options -->
-        <li class="content-btn center nav-config-item" id="addNavItem">Add Item</li>
-        <li class="content-btn center nav-config-item" id="removeNavItem">Remove Item</li>
-        <li class="content-btn center nav-config-item" id="menuLeft">Menu left</li>
-        <li class="content-btn center nav-config-item" id="menuRight">Menu right</li>
-        <!-- Slider config options -->
-        <li class="content-btn center slider-config-item" id="remove-buttons-slider">Remove Btn</li>
-        <li class="content-btn center slider-config-item" id="add-buttons-slider">Add Btn</li>
-        <li class="content-btn center red nav-config-item slider-config-item" id="removeConfig">
-            <i class="material-icons">
-                close
-            </i>
-        </li>
-    </ul>
+                    <li class="main-btn">
+                        <a class="tooltipped" data-position="right"
+                            data-tooltip="Save">
+                            <i class="material-icons">
+                                save
+                            </i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
 
-    <!-- Template -->
-    <div id="template" class="center">
-        <h1>Template will be here</h1>
-        <div id="template-header"></div>
-        <div id="template-content"></div>
-        <div id="template-footer"></div>
-    </div>
+        <ul id="content-panel">
+            <li class="content-btn center" onclick="insertComponentInPage(nav)">Nav</li>
+            <li class="content-btn center"
+                onclick="insertComponentInPage(slider)">Slider</li>
+            <li class="content-btn center"
+                onclick="insertComponentInPage(about)">About</li>
+            <li class="content-btn center"
+                onclick="insertComponentInPage(gallery)">Gallery</li>
+            <li class="content-btn center">Boxes</li>
+            <li class="content-btn center">Toggle</li>
+            <li class="content-btn center">Contact</li>
+            <li class="content-btn center">Footer</li>
+            <li class="content-btn center red" id="removeContent">
+                <i class="material-icons">
+                    close
+                </i>
+            </li>
+        </ul>
+
+        <ul id="config-panel">
+            <!-- Nav config options -->
+            <li class="content-btn center nav-config-item" id="addNavItem">Add
+                Item</li>
+            <li class="content-btn center nav-config-item" id="removeNavItem">Remove
+                Item</li>
+            <li class="content-btn center nav-config-item" id="menuLeft">Menu
+                left</li>
+            <li class="content-btn center nav-config-item" id="menuRight">Menu
+                right</li>
+            <!-- Slider config options -->
+            <li class="content-btn center slider-config-item"
+                id="remove-buttons-slider">Remove Btn</li>
+            <li class="content-btn center slider-config-item"
+                id="add-buttons-slider">Add Btn</li>
+            <li class="content-btn center red nav-config-item
+                slider-config-item" id="removeConfig">
+                <i class="material-icons">
+                    close
+                </i>
+            </li>
+        </ul>
+
+
+        <!-- Template -->
+        <div id="template" class="center">
+            <h1>Template will be here</h1>
+            <div id="template-header"></div>
+            <div id="template-content"></div>
+            <div id="template-footer"></div>
+        </div>
 
 
 
 
-    <div style='height:2300px;'></div>
-    <!-- JQ CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/components.js"></script>
-    <script src="js/ui.js"></script>
-    <script>
+        <div style='height:2300px;'></div>
+        <!-- JQ CDN -->
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="js/components.js"></script>
+        <script src="js/ui.js"></script>
+        <script>
         $(document).ready(function () {
             //custom JS
-
+            
             //tooltip
             $(document).ready(function () {
                 $('.tooltipped').tooltip({
@@ -121,6 +142,6 @@
             });
         });
     </script>
-</body>
+    </body>
 
 </html>

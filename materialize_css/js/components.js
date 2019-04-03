@@ -7,6 +7,7 @@
          initializeConfigPanel(nav);
      },
      content: `
+        <scetion>
            <nav class="blue darken-4 nav-component" id="nav-menu">
                <div class="nav-wrapper">
                <a href="#!" class="brand-logo">Logo</a> 
@@ -27,7 +28,7 @@
                <li class="navigation-item"><a href="#">Contact</a></li>  
                <li class="nav-item-placeholder"></li>
            </ul>
-    
+        </section>
        `
  };
 
@@ -40,6 +41,8 @@
          });
      },
      content: `
+
+    <section>
     <div class="slider">
     <ul class="slides">
       <li>
@@ -84,6 +87,7 @@
       </li>
     </ul>
   </div>
+  </section>
     `
  };
 
@@ -91,15 +95,118 @@
      type: "static",
      init: null,
      content: `
-        <div class="row  blue darken-4 white-text flow-text">
-            <div class="col s12 col m6">
-                <h1>About Us</h1>
-                <img src="img/about.jpg" class="responsive-img">
+        <section>
+            <br><br>
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m6">
+                    <img class="circle responsive-img" src="img/about.jpg" alt="">
+                    </div>
+                    <div class="col s12 m6 blue-text text-darken-4">
+                    <h2 class="center">About Us</h2>
+                    <h5 class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Optio odio debitis distinctio obcaecati repellendus cum.
+                    </h5>
+                    </div>
+                </div>
             </div>
-            <div class="col s12 col m6">
-                <h1>test</h1>
-            </div>
-        </div>
+        </section>
+     `
+ }
+
+ gallery = {
+     type: "dynamic",
+     init: function () {
+         $('.materialboxed').materialbox();
+         initializeConfigPanel(gallery);
+     },
+     content: `
+     <section id="gallery" class="section section-gallery blue darken-4">
+     <div class=" container ">
+       <h3 class="center white-text">
+         Photo Gallery
+       </h3>
+       <div class="row ">
+         <div class="col s12 m3 ">
+           <div class="material-placeholder"><img class="materialboxed responsive-img initialized" src="https://source.unsplash.com/1600x900/?business, SEO " alt=" "></div>
+         </div>
+         <div class="col s12 m3 ">
+           <div class="material-placeholder"><img class="materialboxed responsive-img initialized" src="https://source.unsplash.com/1600x900/?marketing, codes " alt=" "></div>
+         </div>
+         <div class="col s12 m3 ">
+           <div class="material-placeholder"><img class="materialboxed responsive-img initialized" src="https://source.unsplash.com/1600x900/?team, company " alt=" "></div>
+         </div>
+         <div class="col s12 m3 ">
+           <div class="material-placeholder"><img class="materialboxed responsive-img initialized" src="https://source.unsplash.com/1600x900/?laptop, meeting;    " alt=" "></div>
+         </div>
+       </div>
+ 
+       <div class="row ">
+         <div class="col s12 m3 ">
+           <div class="material-placeholder"><img class="materialboxed responsive-img initialized" src="https://source.unsplash.com/1600x900/?team, notes;    " alt=" "></div>
+         </div>
+         <div class="col s12 m3 ">
+           <div class="material-placeholder"><img class="materialboxed responsive-img initialized" src="https://source.unsplash.com/1600x900/?code, office;    " alt=" "></div>
+         </div>
+         <div class="col s12 m3 ">
+           <div class="material-placeholder"><img class="materialboxed responsive-img initialized" src="https://source.unsplash.com/1600x900/?server, product " alt=" "></div>
+         </div>
+         <div class="col s12 m3 ">
+           <div class="material-placeholder"><img class="materialboxed responsive-img initialized" src="https://source.unsplash.com/1600x900/?marketing, SEO;    " alt=" "></div>
+         </div>
+       </div>
+ 
+       <div class="row ">
+         <div class="col s12 m3 ">
+           <div class="material-placeholder"><img class="materialboxed responsive-img initialized" src="https://source.unsplash.com/1600x900/?server, product " alt=" "></div>
+         </div>
+         <div class="col s12 m3 ">
+           <div class="material-placeholder"><img class="materialboxed responsive-img initialized" src="https://source.unsplash.com/1600x900/?team, notes " alt=" "></div>
+         </div>
+         <div class="col s12 m3 ">
+           <div class="material-placeholder"><img class="materialboxed responsive-img initialized" src="https://source.unsplash.com/1600x900/?socia, community;    " alt=" "></div>
+         </div>
+         <div class="col s12 m3 ">
+           <div class="material-placeholder"><img class="materialboxed responsive-img initialized" src="https://source.unsplash.com/1600x900/?team, notes;    " alt=" "></div>
+         </div>
+       </div>
+     </div>
+   </section>
+    `
+ }
+
+ boxes = {
+     type: "static",
+     init: null,
+     content: `
+     <section class="section section-icons pink darken-3 center">
+     <div class="container">
+       <div class="row">
+         <div class="col s12 m4">
+           <div class="card-panel">
+             <i class="material-icons large pink-text text-darken-4">location_on</i>
+             <h4 class="pink-text text-darken-4">Easy to find</h4>
+             <p class="pink-text text-darken-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+               neque?</p>
+           </div>
+         </div>
+         <div class="col s12 m4">
+           <div class="card-panel">
+             <i class="material-icons large pink-text text-darken-4">directions_bike</i>
+             <h4 class="pink-text text-darken-4">Fast delivery</h4>
+             <p class="pink-text text-darken-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+               neque?</p>
+           </div>
+         </div>
+         <div class="col s12 m4">
+           <div class="card-panel">
+             <i class="material-icons large pink-text text-darken-4">card_giftcard</i>
+             <h4 class="pink-text text-darken-4">Giftcards</h4>
+             <p class="pink-text text-darken-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+               neque?</p>
+           </div>
+         </div>
+   </div></div></section>
      `
  }
 
@@ -127,10 +234,16 @@
              document.querySelector("#template-content").innerHTML += component.content;
              component.init();
              console.log('adding slider...');
+         } else if (component === gallery) {
+             document.querySelector("#template-content").innerHTML += component.content;
+             component.init();
+             console.log('adding gallery...');
          }
 
 
      }
+
+     reinitDynamic();
 
  }
 
@@ -216,8 +329,17 @@
          });
 
 
+     } else if (componet === gallery) {
+         //  console.log('initializing config mode for gallery');
      }
 
+ }
+
+ //reinitialize all dynamic components
+ function reinitDynamic() {
+     //re initialize slider
+     $('.slider').slider();
+     initializeConfigPanel(slider);
  }
 
 
